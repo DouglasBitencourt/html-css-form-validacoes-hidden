@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <form method="post" enctype="multipart/form-data"><!--converter arquivos em bites-->
+    <input type="hidden" name="country" value="BR"> 
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label>
+            Nome completo: <br>
+            <input type="text" name="name"  minlength="3" maxlength="12">
+        </label><br>
+
+        <label>
+            Sobrenome: <br>
+            <input type="text" name="lastname" required> 
+        </label><br>
+
+        <label>
+            Foto: <br>
+            <input type="file" name="photo" multiple="multiple"  accept="image/*"> <!--da pra usar applcation/pdf pra escolher outros formatos-->
+        </label><br>
+
+        <label>
+            Idade: <br>
+            <input type="number" name="age" step="2" min="18" max="120"> 
+        </label><br>
+
+        <label>
+            Data nascimento: <br>
+            <input type="date" name="birthdate" min="2023/07/16" max="2023/07/16"> 
+        </label><br>
+
+        <label>
+            Email: <br>
+            <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Endereço de e-mail"> 
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Dados Profissionais</legend>
+        <label>
+        Nome da empresa: <br>
+            <input type="text" name="companyname" required>
+        </label><br>
+
+        <label>
+            Cargo: <br>
+            <input type="text" name="companyjobtitle" required> 
+        </label><br>
+
+     </fieldset>
+
+     <input type="submit" value="Cadastrar">
+
+   </form>
+</body>
+</html>
